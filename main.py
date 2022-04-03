@@ -1,8 +1,10 @@
+from datetime import datetime
 from netmiko import ConnectHandler, NetMikoTimeoutException, NetMikoAuthenticationException
 import yaml
 import time
 import sys
 
+file_log = open("config_log.txt", "a")
 # dev: device info
 # cmd: command
 def send_command(dev: dict, cmd: str) -> str:
@@ -48,3 +50,8 @@ if __name__ == '__main__':
 
     elapsed_time = time.perf_counter() -  execution_start_timer
     print(f"\n\"{command}\" executed in {devices_counter} devices in {elapsed_time:0.2f} seconds.\n")
+    file_log.write(
+        f"logs:[{device['host']}]\n{command}\n{result}\n"
+    )
+
+file_log.close()
