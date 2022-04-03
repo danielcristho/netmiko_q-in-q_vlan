@@ -1,0 +1,11 @@
+  vars:
+    username: admin
+    password: admin
+    device_type: mikrotik_routeros
+
+  hosts:
+    - hostname: Router1
+      host: 192.168.1.1
+
+    - hostname: Router2
+      host: 192.168.1.2
