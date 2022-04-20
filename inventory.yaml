@@ -9,3 +9,7 @@
 
     - hostname: Router2
       host: 192.168.1.2
+
+  list_vlan:
+    - vlan: 10
+      sub_vlan: 200, 300    
