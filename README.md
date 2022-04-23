@@ -2,4 +2,4 @@
 
 #### referensi: 
 - https://wiki.mikrotik.com/wiki/Manual:Interface/VLAN#Q-in-Q
-- https://ktbyers.github.io/netmiko/docs/netmiko/mikrotik/index.html/
+- https://ktbyers.github.io/netmiko/docs/netmiko/mikrotik/
