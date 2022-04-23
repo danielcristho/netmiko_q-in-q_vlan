@@ -19,3 +19,19 @@ def device_connection(router_ip):
 
     conn = ConnectHandler(**device)
     return conn
+
+def conf_int(conn,conf_int):
+    vlanInterface1 = conf_int['interface1']
+    interface = conf_int['interface']
+    list_conf = ['interface vlan add name=vlan10 use-service-tag=yes', 
+                '{}'.format(vlanInterface1), '{}'.format(interface)]
+
+    print (conn.send_config_set(list_conf))
+
+def conf_ip(conn, ip_config):
+    interface = ip_config['interface']
+    ip_addr = ip_config['ip_address']
+    list_conf = ['ip address add interface= {}'.format(interface),
+                '{}'.format(ip_addr)]
+
+    print (conn.send_config_set(list_conf))            
