@@ -5,9 +5,9 @@ Q-IN-Q:
         ip_address: 10.0.1.1/30
     
     vlan_conf:
-      - interface: vlan 10
+      - interface1: vlan 10
 
-      - interface: vlan 123
+      - interface2: vlan 123
         ip_address: 11.0.1.1/30
 
   - host: 172.16.1.2
@@ -16,7 +16,7 @@ Q-IN-Q:
         ip_address: 10.0.1.2/30
     
     vlan_conf:
-      - interface: vlan 10
+      - interface1: vlan 10
 
-      - interface: vlan 123
+      - interface2: vlan 123
         ip_address: 11.0.1.2/30
